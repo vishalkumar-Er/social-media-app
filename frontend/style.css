@@ -1,0 +1,353 @@
+body {
+  background: radial-gradient(circle at 20% 20%, #f9ce34 0%, #ee2a7b 30%, #6228d7 100%);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+  background: linear-gradient(90deg, #fdc468 0%, #df4996 70%);
+  color: #fff;
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px #0002;
+  border-bottom: 3px solid #ee2a7b;
+}
+.brand {
+  font-size: 26px;
+  font-weight: bold;
+  margin-left: 24px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 1px 2px 12px #33123344;
+}
+
+.nav-right {
+  margin-right: 24px;
+}
+.nav-right span {
+  margin-right: 14px;
+  font-weight: bold;
+}
+.nav-right button {
+  margin-left: 6px;
+  background: linear-gradient(90deg, #fd5 0%, #ee2a7b 70%, #6228d7 100%);
+  color: #fff;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 7px #ee2a7b44;
+  transition: background 0.27s, filter 0.16s, box-shadow 0.16s, transform 0.17s;
+}
+/* Navbar button hover effect — Yaha hover ka use hua hai */
+.nav-right button:hover {
+  filter: brightness(1.11) saturate(1.2);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 18px #ee2a7baa;
+}
+/* Button active effect — Yaha tap/click par feedback effect aayega */
+button:active, .auth-btn:active, .nav-right button:active {
+  filter: brightness(0.88);
+  outline: none;
+  box-shadow: 0 1px 3px #3332;
+  transform: scale(0.97);
+}
+
+footer {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(90deg, #fdc468 0%, #df4996 100%);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+  z-index: 100;
+  border-top: 2px solid #ee2a7b;
+  box-shadow: 0 -2px 8px #b32c6e22;
+}
+@media (max-width: 700px) {
+  footer {
+    font-size: 12px;
+    padding: 8px 0;
+    position:relative;
+  }
+}
+
+.container {
+  max-width: 1100px;
+  margin: 38px auto 60px;
+  display: flex; flex-direction: row; gap: 20px;
+  min-height: 80vh;
+}
+
+/* Auth Card */
+.auth-card {
+  max-width: 340px;
+  margin: 60px auto;
+  padding: 30px 35px 25px;
+  background: #fff;
+  border-radius: 17px;
+  box-shadow: 0 6px 22px #e02a7b18, 0 1.5px 5px #eee7;
+  text-align: center;
+  border: 1.5px solid #fa44b866;
+}
+
+.tabs {
+  display: flex; margin-bottom: 18px;
+}
+.tabs button {
+  flex: 1;
+  padding: 12px 0;
+  background: none; border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ad1457;
+  border-bottom: 2.4px solid transparent;
+  outline: none;
+  transition: border 0.2s;
+}
+.tabs button.active {
+  border-bottom: 3px solid #ee2a7b;
+  color: #ee2a7b;
+}
+
+.auth-input, .create-post textarea, #edit-bio, #edit-avatar {
+  width: 95%;
+  padding: 12px 10px;
+  margin: 10px 0 15px;
+  border: 1.5px solid #ffa372;
+  border-radius: 11px!important;
+  font-size: 16px;
+  background: #fbeff6;
+  transition: border 0.2s;
+  box-shadow: 0 1px 6px #ffa3a355; /* Input subtle shadow */
+}
+.auth-input:focus, .create-post textarea:focus, #edit-bio:focus, #edit-avatar:focus {
+  border: 1.7px solid #ee2a7b;
+  outline: none;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 11px 0;
+  background: linear-gradient(90deg, #fd5 0%, #ee2a7b 70%, #6228d7 100%);
+  color: #fff;
+  border: none; border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 7px #b32c6e33;
+  transition: background 0.19s, filter 0.19s, box-shadow 0.14s, transform 0.13s;
+}
+/* Auth form button hover effect — Yaha hover ka use hua hai */
+.auth-btn:hover {
+  background: linear-gradient(90deg, #ee2a7b 20%, #6228d7 100%);
+  filter: brightness(1.10);
+  box-shadow: 0 2px 12px #b32c6e33;
+  transform: scale(1.03);
+}
+
+.feed-section { flex: 3; }
+.sidebar {
+  flex: 1; max-width: 240px;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 1px 9px #df499655;
+  padding: 18px 15px;
+  min-height: 350px;
+  margin-bottom: 18px;
+  border: 1.1px solid #f9ce34ee;
+  margin-top: 0;
+}
+.sidebar h3 {
+  color: #6228d7;
+  letter-spacing: 0.6px;
+}
+.user-row {
+  padding: 7px 0 7px 2.5px;
+  font-weight: 500;
+  font-size: 17px;
+}
+.user-row button {
+  margin-left: 8px;
+  padding: 4px 14px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(90deg, #ee2a7b 40%, #6228d7 100%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  box-shadow: 0 1px 4px #ee2a7b22;
+  transition: background 0.14s, box-shadow 0.13s, transform 0.13s;
+}
+/* Follow/Unfollow button hover effect — Yaha hover ka use hua hai */
+.user-row button:hover {
+  background: linear-gradient(90deg, #6228d7, #ee2a7b 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px #6228d788;
+  transform: scale(1.09);
+}
+
+.feed { margin-top: 7px; }
+.card {
+  background: #fff; padding: 23px; border-radius: 10px;
+  box-shadow: 0 2px 8px #e02a7b19;
+  margin-bottom: 15px;
+  border: 1.25px solid #e7b7d644;
+}
+
+.create-post textarea {
+  min-height: 54px;
+  font-size: 15px;
+  border-radius: 11px!important;
+  border: 1.5px solid #fd5;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #fbeff6;
+  box-shadow: 0 1px 6px #ffa3a355;
+}
+.create-post button {
+  float: right; margin-top: 4px;
+  background: linear-gradient(90deg, #fd5 0%, #ee2a7b 70%, #6228d7 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none; padding: 8px 17px;
+  border-radius: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 7px #efd7c6cc;
+  transition: background 0.13s, filter 0.13s, box-shadow 0.13s, transform 0.12s;
+}
+/* Create post button hover effect — Yaha hover ka use hua hai */
+.create-post button:hover {
+  filter: brightness(1.12);
+  background: linear-gradient(90deg, #df4996 35%, #6228d7 100%);
+  color: #fff;
+  transform: scale(1.09);
+  box-shadow: 0 3px 7px #df499644;
+}
+
+.post {
+  padding: 12px 10px;
+  border-bottom: 1.7px solid #fde5f4;
+  background: #fdf8fd;
+  border-radius: 7px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 6px #ee2a7b1a;
+}
+.post:last-child { border-bottom: none; }
+.post .post-user { font-weight: bold; color: #ee2a7b; }
+.post .post-actions { margin-top: 4px; }
+.post .like-btn, .post .comment-btn {
+  color: #ee2a7b;
+  border: none;
+  background: none;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 13px;
+  cursor: pointer;
+  padding: 0 3px;
+  transition: color 0.13s, transform 0.12s;
+}
+/* Like/Comment button hover effect — Yaha hover ka use hua hai */
+.post .like-btn:hover,
+.post .comment-btn:hover {
+  color: #fdc468;
+  font-size: 18px;
+  transform: scale(1.16);
+}
+
+.comment-box { margin-top: 5px; }
+.comment-list { margin-top: 6px; font-size: 15px; }
+.comment-list div { margin-bottom: 2px; color: #555; }
+
+.profile-pic {
+  border-radius: 50%;
+  width: 90px; height: 90px; margin-bottom: 13px;
+  border: 3.4px solid #ee2a7b;
+  box-shadow: 0 1px 8px #fdc46833;
+}
+
+#profile-sidebar {
+  position: absolute;
+  top: 74px; left: 40px; width: 225px;
+  background: #fff;
+  z-index: 12;
+  box-shadow: 0 4px 24px #df499661;
+  display: none;
+  padding: 32px 18px 22px;
+  border-radius: 15px;
+  border: 2px solid #fdc468;
+  transition: box-shadow 0.22s, left 0.21s;
+}
+#profile-sidebar[style*="display: block"] { /* transition pop */
+  box-shadow: 0 10px 30px #6228d799, 0 3px 10px #ee2a7b36;
+}
+#profile-sidebar button {
+  background: #ee2a7b;
+  color: #fff; border: none;
+  padding: 8px 18px; border-radius: 10px; margin-top: 13px;
+  font-weight: bold; cursor: pointer;
+  transition: background 0.12s, transform 0.13s, box-shadow 0.12s;
+}
+/* Profile sidebar close button hover effect — Yaha hover ka use hua hai */
+#profile-sidebar button:hover {
+  background: #fa1972;
+  color: #fff;
+  transform: scale(1.08) rotate(-1.5deg);
+  box-shadow: 0 4px 10px #ee2a7ba3;
+}
+
+/* Modal overlay & followers modal pro polish ------ */
+#modal-overlay {
+  position:fixed; top:0; left:0; right:0; bottom:0;
+  background: rgba(44,0,58,0.17);
+  z-index: 1001;
+  display: none;
+}
+#followers-modal {
+  background: #fff;
+  border-radius: 19px;
+  padding: 36px 44px;
+  min-width: 235px;
+  box-shadow: 0 7px 28px #ee2a7b44, 0 2px 4px #5552;
+  z-index: 1020;
+  border: 1px solid #ffb9e4;
+  transition: transform 0.18s;
+}
+#followers-modal h4 { color: #ee2a7b; margin-bottom:8px; }
+#followers-modal ul { list-style:none; padding-left:0; }
+#followers-modal li { padding: 2px 0; font-weight:500; }
+#followers-modal button {
+  background: linear-gradient(90deg, #fd5 0%, #ee2a7b 80%);
+  border: none;
+  color: #fff;
+  padding: 7px 18px;
+  border-radius: 9px;
+  margin-top: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px #efd7c6aa;
+  transition: background 0.13s;
+}
+#followers-modal button:hover { background: #ee2a7b; }
+
+@media (max-width: 900px) {
+  .container { flex-direction: column; }
+  .sidebar { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .container { padding: 0 1.5vw; }
+  nav { flex-direction: column; align-items: flex-start; }
+  .brand { margin-left: 10px; font-size: 22px; }
+}

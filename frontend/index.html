@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Social Media</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-left">
+      <span class="brand">MiniSocialApp</span>
+    </div>
+    <div class="nav-right" id="nav-user" style="display:none;">
+      <span id="nav-username"></span>
+      <button onclick="showProfile()">Profile</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Auth Container -->
+  <div class="container" id="auth-container">
+    <div class="card auth-card">
+      <div class="tabs">
+        <button id="login-tab" class="active" onclick="showLogin()">Login</button>
+        <button id="register-tab" onclick="showRegister()">Register</button>
+      </div>
+      <div id="auth-content">
+        <!-- Dynamic login/register form here -->
+      </div>
+      <div id="auth-message"></div>
+    </div>
+  </div>
+
+  <!-- Main App Container -->
+  <div class="container" id="main-container" style="display:none;">
+    <div class="sidebar" id="profile-sidebar" style="display:none;">
+      <img src="https://i.pravatar.cc/100?img=1" id="profile-pic" alt="profile" class="profile-pic">
+      <h2 id="profile-username"></h2>
+      <div>
+        <span id="follower-count"></span> Followers |
+        <span id="following-count"></span> Following
+      </div>
+      <div>
+        <span id="post-count"></span> Posts
+      </div>
+      <div id="profile-bio"></div>
+      <!-- In #profile-sidebar, after <div id="profile-bio"></div> -->
+      <div id="profile-edit" style="display:none;">
+        <input id="edit-bio" class="auth-input" placeholder="Update bio">
+        <input id="edit-avatar" class="auth-input" placeholder="Image URL">
+        <button class="auth-btn" onclick="saveProfile()">Save</button>
+      </div>
+      <button onclick="toggleEditProfile()">Edit Profile</button>
+
+      <button onclick="hideProfile()">Close</button>
+    </div>
+    <div class="feed-section">
+      <!-- Post create -->
+      <div class="card create-post">
+        <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+        <button onclick="createPost()">Post</button>
+      </div>
+      <!-- FEED -->
+      <div class="feed" id="feed"></div>
+    </div>
+    <div class="sidebar">
+      <h3>All Users</h3>
+      <div id="users"></div>
+    </div>
+  </div>
+
+  <footer>
+    <span>&copy; 2025 MiniSocial • Built with ❤️</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+
+</html>

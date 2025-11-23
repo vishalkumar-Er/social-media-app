@@ -22,13 +22,3 @@ A full-stack mini social media platform built with:
 
 ---
 
-## 📸 Screenshots
-
-> ![Feed Screenshot](screens/feed.png)  
-> ![Profile Edit Screenshot](screens/profile-edit.png)
-
----
-
-## ⚙️ How to Run
-
-### 1. Backend (API server)
